@@ -1,0 +1,25 @@
+{% extends "login/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <div id="contenedor-imagenes-insectos">
+        <h1>Insectos que me hacen correr</h1>
+
+        {% for insecto in insectos %}
+        <div class="contenedor-insectos">
+            <h3>{{insecto.nombre}}</h3>
+            <img src="{{insecto.imagen.url}}" alt="{{insecto.nombreInsecto}}" class="imagen-insectos">
+            <p>{{insecto.descripcion}}</p>
+            <p>
+                Estados donde se encuentran: 
+                {% for estado in insecto.categoriaInsectos.all %}
+                    {{estado.nombreEstado}}{% if not forloop.last %},{% endif %}
+                {% endfor %}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
