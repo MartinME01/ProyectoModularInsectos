@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'estilos/base.css' %}">
+    <title>Analizador de insectos</title>
+</head>
+<body>
+
+    <h1 id="titulo-principal">Identificador de insectos con IA wtf este titulo esta muy largo aaa</h1>
+
+    <ul id="lista-botones">
+        <li class="item-botones"><a href="{% url 'login' %}">Inicia sesion</a></li>
+        <li class="item-botones"><a href="{% url 'register' %}">Registrate</a></li>
+    </ul>
+
+    <nav class="lista">
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'insectos' %}">Insectos</a>
+        <a href="{% url 'contacto' %}">Contacto</a>
+    </nav>
+    
+    {% block content %}{% endblock %}
+
+</body>
+</html>

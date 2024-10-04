@@ -1,0 +1,32 @@
+{% extends "inicio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+    
+    <table>
+        <thead>
+            <th colspan="2">Inicio</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p>
+                        Este es un proyecto creado para identificar insectos mediante una <br>
+                        inteligencia artificial, lo que se busca es que el usuario use su <br>
+                        camara celular para tomarle la foto al insecto y la inteligencia <br>
+                        artificial se encarge de identificar y dar una breve explicacion <br>
+                        sobre este <br>
+                    </p>
+                </td>
+                <td>
+                    <img src="{% static 'imagenes/paisaje.jpeg' %}" alt="Paisaje" id="imagenInicio">
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+
+{% endblock %}
